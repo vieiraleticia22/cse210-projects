@@ -1,0 +1,41 @@
+
+Encapsulation is how we can protect the internal data of a class by 
+making its attributes private and controlling access to them through 
+public methods, such as getters and setters.
+
+One important benefit of encapsulation is data protection. It prevents
+other parts of a program from changing an object's data directly.
+Instead, the program must use specific methods to access or modify that information.
+This makes the code more organized, secure, easier to maintain, and less likely to contain errors.
+
+One example it is in my C# Fraction program,I created a Fraction class with private
+attributes to store the numerator and denominator. I used public methods to control how
+other parts of the program access and modify these values.
+
+private int _top;
+private int _bottom;
+
+public int GetTop()
+{
+    return _top;
+}
+
+public void SetTop(int top)
+{
+    _top = top;
+}
+
+public int GetBottom()
+{
+    return _bottom;
+}
+
+public void SetBottom(int bottom)
+{
+    _bottom = bottom;
+}
+
+In this example, _top and _bottom are private attributes, which means 
+they cannot be accessed directly from outside the Fraction class. 
+The public getter methods allow other parts of the program to read their values, 
+while the setter methods allow them to be changed in a controlled way.
